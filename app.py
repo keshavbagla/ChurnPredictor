@@ -39,7 +39,7 @@ if st.button("Predict Churn"):
         'OrderCount': order_count,
         'DaySinceLastOrder': days_since_last_order,
         'CashbackAmount': cashback_amount,
-        'avg_chasbackamt_perorder': avg_cashbk_per_order
+        'avg_cashbk_per_order': avg_cashbk_per_order
     }])
 
     data['CityTier'] = data['CityTier'].astype('category')
@@ -51,7 +51,7 @@ if st.button("Predict Churn"):
         'SatisfactionScore', 'Complain',
         'OrderAmountHikeFromlastYear', 'CouponUsed',
         'OrderCount', 'DaySinceLastOrder',
-        'CashbackAmount', 'avg_chasbackamt_perorder'
+        'CashbackAmount', 'avg_cashbk_per_order'
     ]
     data[num_cols] = scaler.transform(data[num_cols])
 
